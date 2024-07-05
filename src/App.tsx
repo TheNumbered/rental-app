@@ -7,6 +7,8 @@ import NotFoundPage from "./pages/not-found";
 import TenantList from "./pages/tenants/list";
 import { ManageTenant } from "./pages/tenants/manage-tenant";
 import CreateExpense from "./pages/expenses/create";
+import SimpleCreateExpense from "./pages/expenses/simple-create";
+import ExpenseList from "./pages/expenses/list";
 
 
 
@@ -26,9 +28,9 @@ const App: React.FC = () => {
             <Route path="/tenants" element={<TenantList/>} />
           </Route>
         )}
-
         <Route path="/manage-tenant" element={<ManageTenant/>} />
-        <Route path="/add-expense" element={<CenteredLayout><CreateExpense/></CenteredLayout>} />
+        <Route path="/add-expense" element={<SimpleCreateExpense/>} />
+        <Route path="/history" element={<ExpenseList/>} />
         
         <Route path="/sign-in" element={<SignInPage />} />
         <Route path="/sign-up" element={<SignInPage />} />

@@ -1,10 +1,9 @@
 import { useSqlQuery } from "@/hooks";
-import { TextField, Typography, Box, CircularProgress } from "@mui/material";
+import { TextField, Typography, Box, CircularProgress, Card, CardHeader } from "@mui/material";
 import { Tenant, TenantQueryString } from "./querys";
 import { useUser } from "@clerk/clerk-react";
 import { useState } from "react";
 import { TenantCard } from "./card";
-import { CenteredLayout } from "@/components";
 
 export const ManageTenant: React.FC = () => {
     const { user } = useUser();
@@ -23,25 +22,11 @@ export const ManageTenant: React.FC = () => {
     });
 
     return (
-        <CenteredLayout>
-            <Box
-                sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    minHeight: "100vh",
-                    padding: 1,
-                    border: 1,
-                    borderColor: "grey.300",
-                    borderRadius: 2,
-                    boxShadow: 3,
-                    backgroundColor: "background.paper",
-                    width: "100%",
-                    maxWidth: "600px",
-                    margin: "auto"
-                }}
-            >
+        <Card
+        style={{
+            backgroundColor: "#cbe8e2"
+        }}
+        >
                 <TextField
                     variant="outlined"
                     placeholder="Search tenants..."
@@ -64,7 +49,6 @@ export const ManageTenant: React.FC = () => {
                         <Typography>No tenants found</Typography>
                     )
                 )}
-            </Box>
-        </CenteredLayout>
+          </Card>
     );
 }
