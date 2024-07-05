@@ -27,7 +27,7 @@ const App: React.FC = () => {
           </Route>
         )}
 
-        <Route path="/manage-tenant" element={<CenteredLayout><ManageTenant/></CenteredLayout>} />
+        <Route path="/manage-tenant" element={<ManageTenant/>} />
         <Route path="/add-expense" element={<CenteredLayout><CreateExpense/></CenteredLayout>} />
         
         <Route path="/sign-in" element={<SignInPage />} />
