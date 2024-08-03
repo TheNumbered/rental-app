@@ -23,8 +23,8 @@ Rental-App is a web application designed for property owners to efficiently trac
 ## Installation
 
 # .env file
-VITE_CLERK_PUBLISHABLE_KEY=your_publishable_key_here
-VITE_DB_URL=postgresql://your_db_url_here
+- `VITE_CLERK_PUBLISHABLE_KEY`: The publishable key for Clerk authentication. (https://clerk.com/docs/quickstarts/react)
+- `VITE_DB_URL`=postgresql://your_neon_db_connection_string_here
 
 
 1. Clone the repository:

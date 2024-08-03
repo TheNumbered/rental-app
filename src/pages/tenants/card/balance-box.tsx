@@ -5,7 +5,6 @@ export const BalanceBox : React.FC<{outstanding_balance: number, rent_amount: nu
   const balance = outstanding_balance;
   const amount = rent_amount;
   const percentageOutstanding = (balance / amount) * 100;
-  
   return (
     <Box
       sx={{
@@ -31,7 +30,7 @@ export const BalanceBox : React.FC<{outstanding_balance: number, rent_amount: nu
           border: "1px solid rgba(0, 0, 0, 0.3)",
         }}
       >
-        <Typography variant="body2">{outstanding_balance>0 && "-" } R {outstanding_balance}</Typography>
+        <Typography variant="body2"> R {-1*outstanding_balance}</Typography>
       </Box>
     </Box>
   );
