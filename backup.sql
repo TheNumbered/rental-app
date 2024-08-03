@@ -2,7 +2,7 @@
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 15.7
+-- Dumped from database version 16.3
 -- Dumped by pg_dump version 16.3
 
 SET statement_timeout = 0;
@@ -17,7 +17,7 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: update_and_insert_expense(uuid); Type: FUNCTION; Schema: public; Owner: danxngo
+-- Name: update_and_insert_expense(uuid); Type: FUNCTION; Schema: public; Owner: rental-app_owner
 --
 
 CREATE FUNCTION public.update_and_insert_expense(expense_id uuid) RETURNS void
@@ -49,14 +49,14 @@ CREATE FUNCTION public.update_and_insert_expense(expense_id uuid) RETURNS void
     $$;
 
 
-ALTER FUNCTION public.update_and_insert_expense(expense_id uuid) OWNER TO danxngo;
+ALTER FUNCTION public.update_and_insert_expense(expense_id uuid) OWNER TO "rental-app_owner";
 
 SET default_tablespace = '';
 
 SET default_table_access_method = heap;
 
 --
--- Name: electricity_tokens; Type: TABLE; Schema: public; Owner: danxngo
+-- Name: electricity_tokens; Type: TABLE; Schema: public; Owner: rental-app_owner
 --
 
 CREATE TABLE public.electricity_tokens (
@@ -66,10 +66,10 @@ CREATE TABLE public.electricity_tokens (
 );
 
 
-ALTER TABLE public.electricity_tokens OWNER TO danxngo;
+ALTER TABLE public.electricity_tokens OWNER TO "rental-app_owner";
 
 --
--- Name: expenses; Type: TABLE; Schema: public; Owner: danxngo
+-- Name: expenses; Type: TABLE; Schema: public; Owner: rental-app_owner
 --
 
 CREATE TABLE public.expenses (
@@ -84,10 +84,10 @@ CREATE TABLE public.expenses (
 );
 
 
-ALTER TABLE public.expenses OWNER TO danxngo;
+ALTER TABLE public.expenses OWNER TO "rental-app_owner";
 
 --
--- Name: houses; Type: TABLE; Schema: public; Owner: danxngo
+-- Name: houses; Type: TABLE; Schema: public; Owner: rental-app_owner
 --
 
 CREATE TABLE public.houses (
@@ -97,10 +97,10 @@ CREATE TABLE public.houses (
 );
 
 
-ALTER TABLE public.houses OWNER TO danxngo;
+ALTER TABLE public.houses OWNER TO "rental-app_owner";
 
 --
--- Name: payments; Type: TABLE; Schema: public; Owner: danxngo
+-- Name: payments; Type: TABLE; Schema: public; Owner: rental-app_owner
 --
 
 CREATE TABLE public.payments (
@@ -111,10 +111,10 @@ CREATE TABLE public.payments (
 );
 
 
-ALTER TABLE public.payments OWNER TO danxngo;
+ALTER TABLE public.payments OWNER TO "rental-app_owner";
 
 --
--- Name: rooms; Type: TABLE; Schema: public; Owner: danxngo
+-- Name: rooms; Type: TABLE; Schema: public; Owner: rental-app_owner
 --
 
 CREATE TABLE public.rooms (
@@ -125,10 +125,10 @@ CREATE TABLE public.rooms (
 );
 
 
-ALTER TABLE public.rooms OWNER TO danxngo;
+ALTER TABLE public.rooms OWNER TO "rental-app_owner";
 
 --
--- Name: tenants; Type: TABLE; Schema: public; Owner: danxngo
+-- Name: tenants; Type: TABLE; Schema: public; Owner: rental-app_owner
 --
 
 CREATE TABLE public.tenants (
@@ -140,10 +140,10 @@ CREATE TABLE public.tenants (
 );
 
 
-ALTER TABLE public.tenants OWNER TO danxngo;
+ALTER TABLE public.tenants OWNER TO "rental-app_owner";
 
 --
--- Name: electricity_tokens electricity_pkey; Type: CONSTRAINT; Schema: public; Owner: danxngo
+-- Name: electricity_tokens electricity_pkey; Type: CONSTRAINT; Schema: public; Owner: rental-app_owner
 --
 
 ALTER TABLE ONLY public.electricity_tokens
@@ -151,7 +151,7 @@ ALTER TABLE ONLY public.electricity_tokens
 
 
 --
--- Name: expenses expenses_pkey; Type: CONSTRAINT; Schema: public; Owner: danxngo
+-- Name: expenses expenses_pkey; Type: CONSTRAINT; Schema: public; Owner: rental-app_owner
 --
 
 ALTER TABLE ONLY public.expenses
@@ -159,7 +159,7 @@ ALTER TABLE ONLY public.expenses
 
 
 --
--- Name: houses houses_pkey; Type: CONSTRAINT; Schema: public; Owner: danxngo
+-- Name: houses houses_pkey; Type: CONSTRAINT; Schema: public; Owner: rental-app_owner
 --
 
 ALTER TABLE ONLY public.houses
@@ -167,7 +167,7 @@ ALTER TABLE ONLY public.houses
 
 
 --
--- Name: payments payments_pkey; Type: CONSTRAINT; Schema: public; Owner: danxngo
+-- Name: payments payments_pkey; Type: CONSTRAINT; Schema: public; Owner: rental-app_owner
 --
 
 ALTER TABLE ONLY public.payments
@@ -175,7 +175,7 @@ ALTER TABLE ONLY public.payments
 
 
 --
--- Name: rooms rooms_pkey; Type: CONSTRAINT; Schema: public; Owner: danxngo
+-- Name: rooms rooms_pkey; Type: CONSTRAINT; Schema: public; Owner: rental-app_owner
 --
 
 ALTER TABLE ONLY public.rooms
@@ -183,7 +183,7 @@ ALTER TABLE ONLY public.rooms
 
 
 --
--- Name: tenants tenants_pkey; Type: CONSTRAINT; Schema: public; Owner: danxngo
+-- Name: tenants tenants_pkey; Type: CONSTRAINT; Schema: public; Owner: rental-app_owner
 --
 
 ALTER TABLE ONLY public.tenants
@@ -191,7 +191,7 @@ ALTER TABLE ONLY public.tenants
 
 
 --
--- Name: electricity_tokens electricity_room_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: danxngo
+-- Name: electricity_tokens electricity_room_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: rental-app_owner
 --
 
 ALTER TABLE ONLY public.electricity_tokens
@@ -199,7 +199,7 @@ ALTER TABLE ONLY public.electricity_tokens
 
 
 --
--- Name: rooms rooms_house_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: danxngo
+-- Name: rooms rooms_house_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: rental-app_owner
 --
 
 ALTER TABLE ONLY public.rooms
@@ -207,7 +207,7 @@ ALTER TABLE ONLY public.rooms
 
 
 --
--- Name: tenants tenants_room_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: danxngo
+-- Name: tenants tenants_room_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: rental-app_owner
 --
 
 ALTER TABLE ONLY public.tenants

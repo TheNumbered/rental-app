@@ -24,7 +24,7 @@ export type ExpensesInput = {
     id?: string;
     title: any;
     amount: number;
-    date?: Date | string;
+    date: Date | string;
     is_recurring: boolean;
     frequency?: any;
     user_id: any;

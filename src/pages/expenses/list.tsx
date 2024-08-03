@@ -53,7 +53,7 @@ const ExpenseList: React.FC = () => {
             {expenses?.map((expense) => (
               <TableRow key={expense.id}>
                 <TableCell>{expense.title}</TableCell>
-                <TableCell>${expense.amount}</TableCell>
+                <TableCell>R {expense.amount}</TableCell>
                 <TableCell>{new Date(expense.date).toLocaleDateString()}</TableCell>
                 <TableCell>
                   <IconButton onClick={() => handleDelete(expense.id)} color="error">
